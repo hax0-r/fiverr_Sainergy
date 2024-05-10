@@ -150,7 +150,7 @@ body {
 }
 
 .head {
-    background: linear-gradient(#d9dbdd74, #d9dbdd75), url(./Assests/About/bg.webp) center;
+    background: linear-gradient(#d9dbdd74, #d9dbdd75), url(./Assests/Career/bg.webp) center;
     background-size: cover;
     height: 25rem;
     display: flex;
@@ -168,6 +168,9 @@ body {
         h1 {
             font-size: clamp(2rem, -0.875rem + 8.333vw, 4rem);
 
+            span {
+                color: #ed1b24;
+            }
         }
 
         #underLine {
@@ -193,58 +196,6 @@ body {
     }
 }
 
-.paragraph {
-    max-width: 80rem;
-    width: 100%;
-    padding: 5vw 3vw;
-    margin: auto;
-
-    p {
-        font-size: clamp(1.1rem, -0.875rem + 8.333vw, 1.3rem);
-    }
-    
-    @media (max-width:500px) {
-        p {
-            padding: 0 1rem ;
-        }
-        
-    }
-}
-
-.gupta {
-    max-width: 40rem;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-
-    .people {
-
-        /* border: 2px solid red; */
-        h1 {
-            font-size: 1.5rem;
-            padding-bottom: 2rem;
-            text-align: center;
-        }
-
-    }
-    @media (max-width:500px) {
-        padding-top: 1.7rem;
-        padding-bottom: 3rem;
-        .people {
-            padding: 0 .5rem;
-            h1 {
-                font-size: 1.2rem;
-                padding-bottom: 1rem;
-                text-align: center;
-            }
-    
-        }
-
-        
-    }
-}
-
 .awards {
     padding: 5vw 3vw;
     max-width: 80rem;
@@ -252,9 +203,12 @@ body {
     margin: auto;
 
     h1 {
-        font-size: clamp(1.8rem, -0.875rem + 8.333vw, 2.8rem);
+        font-size: clamp(1rem, -0.875rem + 8.333vw, 1.3rem);
         text-align: center;
-        padding-bottom: 3rem;
+        padding-bottom: 5rem;
+        max-width: 55rem;
+        margin: auto;
+        width: 100%;
     }
 
     .swiper-slide {
@@ -274,6 +228,7 @@ body {
 
         p {
             max-width: 20rem;
+            color: #000000c9;
         }
 
         .divider {
@@ -283,50 +238,80 @@ body {
     }
 }
 
-.clients {
-    max-width: 65rem;
+.form {
     margin: auto;
-    width: 100%;
+    padding: 5vw 3vw;
 
-    h1 {
-        font-size: clamp(1.8rem, -0.875rem + 8.333vw, 2.8rem);
-        text-align: center;
-        padding-bottom: 3rem;
+    h1{
+        font-size: clamp(1.5rem, -0.875rem + 8.333vw, 2.5rem);
+        padding: 0 1rem;
+        max-width: 55rem;
+        padding-bottom: 2rem;
+        width: 100%;
+        margin: auto;
     }
 
-    .swiper-slide {
+    form {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
 
-        h1 {
-            font-size: 2rem;
-            padding-bottom: .5rem;
-        }
-
-        h6 {
-            font-size: 1rem;
-            color: #000000cc;
-            padding: .7rem;
-        }
-
-        .divider{
+        .formData {
+            max-width: 40rem;
             width: 100%;
-            height: 2rem;
-        }
-    }
-
-    @media (max-width:600px) {
-        padding: 0 2rem;
-
-        h1 {
-            padding-bottom: 0rem;
-        }
-
-        .swiper-slide {
+            display: flex;
             flex-direction: column;
 
+            .first,
+            .second {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                padding-bottom: 1rem;
+
+                input {
+                    padding: .7rem 1rem;
+                    width: 100%;
+                    border-radius: 7px;
+                    border: 1px solid #80808071;
+                }
+            }
+
+            textarea {
+                border: 1px solid #80808071;
+                padding: 1rem;
+            }
+
+            button {
+                margin-top: 1rem;
+                border: none;
+                border-radius: 7px;
+                font-size: 1.2rem;
+                font-weight: 500;
+                padding: 1rem;
+                cursor: pointer;
+                border: 2px solid #f0f0f0;
+                transition: 200ms all;
+
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+
+            .content {
+            }
         }
     }
+    @media (max-width:600px) {
+        form{
+            flex-direction: column;
+            padding: 0 1rem;
+        }
+    }
+
 }
+
 .footer {
     background-color: var(--black);
     padding: 3.5rem 1rem;

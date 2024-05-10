@@ -253,3 +253,69 @@ body {
     }
 
 }
+
+.footer {
+    background-color: var(--black);
+    padding: 3.5rem 1rem;
+    color: var(--white);
+
+    .main {
+        max-width: 36rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+        gap: 2rem;
+
+        h1 {
+            font-size: clamp(1.3rem, -0.875rem + 8.333vw, 2rem)
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .8rem;
+
+            input {
+                max-width: 32rem;
+                width: 100%;
+                padding: .8rem 1rem;
+                border: 2px solid #ffffffac;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                letter-spacing: .06rem;
+                background-color: transparent;
+                color: var(--white);
+
+                &::placeholder {
+                    font-size: 1rem;
+                }
+            }
+
+            button {
+                padding: .8rem 1rem;
+                max-width: 32rem;
+                width: 100%;
+                border: none;
+                border-radius: 25rem;
+                font-size: 1.2rem;
+                font-weight: 500;
+                background-color: #ffffffac;
+                cursor: pointer;
+                transition: 200ms all;
+
+                &:hover {
+                    background-color: #ffffff;
+                }
+            }
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
