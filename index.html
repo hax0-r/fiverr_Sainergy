@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HOME | Sainergy</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+    <div id="home">
+        <!-- <div class="navbar">
+            <div class="main">
+                <img src="./Assests/Globle/logo.webp" alt="">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Careeers</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+        </div> -->
+        <div class="sapConsulting">
+            <div class="main">
+                <div>
+                    <img src="./Assests/Home/sapConsulting.webp" alt="">
+                </div>
+                <div class="content">
+                    <h1>SAP Consulting & Software Integration</h1>
+                    <h3>20+ Years of Professional Experience.</h3>
+                    <p>Sainergy provides SAP consulting services to major clients in Technical and Functional areas. We
+                        work with our clients to provide business solutions and achieve exceptional results. We do this
+                        through a combination of world-class resources, innovative methodologies and deep expert
+                        knowledge pools.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="integration">
+            <h1>Integration Capabilities</h1>
+            <div class="companies">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./Assests/Home/saleForce.webp" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./Assests/Home/coupa.webp" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./Assests/Home/sapAriba.webp" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./Assests/Home/zycus.webp" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./Assests/Home/successfactors.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <h1>Services</h1>
+            <div class="content">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h1>01</h1>
+                            <p>Managed SAP services for increased operational agility in your business</p>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h1>02</h1>
+                            <p>Managed SAP services for increased operational agility in your business</p>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h1>03</h1>
+                            <p>Managed SAP services for increased operational agility in your business</p>
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="main">
+                <h1>Sign up for latest IT news and Sainergy updates</h1>
+                <div>
+                    <input type="text" placeholder="Enter your E-Mail here" required>
+                    <button>Send</button>
+                </div>
+                <p>10655 Professional Circle, Suite A <br>Reno, NV 89521</p>
+                <p>(408) 532-9800 (Office) | admin@sainergy.net</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: getSlidesPerView(),
+            spaceBetween: 30,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        // Function to determine the number of slides per view based on screen width
+        function getSlidesPerView() {
+            if (window.innerWidth < 500) {
+                return 1;
+            } else if (window.innerWidth < 769) {
+                return 2;
+            } else {
+                return 3;
+            }
+        }
+
+        // Update slidesPerView on window resize
+        window.addEventListener('resize', function () {
+            swiper.params.slidesPerView = getSlidesPerView();
+            swiper.update();
+        });
+    </script>
+
+</body>
+
+</html>
