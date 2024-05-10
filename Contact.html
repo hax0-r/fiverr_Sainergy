@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact.css">
+    <title>Contact Us | Sainergy</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="contact">
+        <div class="navbar">
+            <div class="main">
+                <img src="./Assests/Globle/logo.webp" alt="">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="./About.html">About Us</a></li>
+                    <li><a href="./Services.html">Services</a></li>
+                    <li><a href="./Career.html">Careeers</a></li>
+                    <li><a href="./Contact.html">Contact</a></li>
+                </ul>
+                <i id="close" class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="navResponseive">
+            <img src="./Assests/Globle/logo.webp" alt="">
+            <i id="open" class="fa-solid fa-bars"></i>
+
+        </div>
+        <div class="head">
+            <div>
+                <h1>Contact Us</h1>
+                <div id="underLine"></div>
+                <p>Fill Out The Form</p>
+            </div>
+        </div>
+        <div class="form">
+            <form>
+                <div class="formData">
+                    <div class="first">
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <div class="second">
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                    <textarea name="" rows="7" id=""></textarea>
+                    <button>Submit</button>
+                </div>
+                <div class="content">
+                    <p>We can be reached at :</p> <br>
+                    <p>Phone(O) : (408)-532-9800 <br>
+                        Email : admin@sainergy.net</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>    
+        let close = document.getElementById("close")
+        close.addEventListener("click", () => {
+            gsap.to(".navbar .main", {
+                left: "-100%"
+            })
+        })
+        let open = document.getElementById("open")
+        open.addEventListener("click", () => {
+            gsap.to(".navbar .main", {
+                left: "0%"
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>

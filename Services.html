@@ -10,12 +10,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div id="services">
+        <div class="navbar">
+            <div class="main">
+                <img src="./Assests/Globle/logo.webp" alt="">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="./About.html">About Us</a></li>
+                    <li><a href="./Services.html">Services</a></li>
+                    <li><a href="./Career.html">Careeers</a></li>
+                    <li><a href="./Contact.html">Contact</a></li>
+                </ul>
+                <i id="close" class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="navResponseive">
+            <img src="./Assests/Globle/logo.webp" alt="">
+            <i id="open" class="fa-solid fa-bars"></i>
+
+        </div>
         <div class="head">
             <div>
                 <h1>Our Services</h1>
@@ -86,7 +105,8 @@
                 <div class="content">
                     <h1>Mobility/UI/UX</h1>
                     <p>
-                        We understand the new needs in the changing business landscape and provide mobility solutions for businesses like the following :<br> <br>
+                        We understand the new needs in the changing business landscape and provide mobility solutions
+                        for businesses like the following :<br> <br>
                         <b>
                             SAP Afaria <br>
                             SAP Fiori <br>
@@ -107,7 +127,9 @@
                 <div class="content">
                     <h1>Staff Augmentation</h1>
                     <p>
-                        Sainergy has been providing quality consultants to our clients through our vast network developed since 1996. Our process begins with a thorough understanding of the requirement of our client to meet the right level of experience in a consultant.
+                        Sainergy has been providing quality consultants to our clients through our vast network
+                        developed since 1996. Our process begins with a thorough understanding of the requirement of our
+                        client to meet the right level of experience in a consultant.
                     </p>
                 </div>
             </div>
@@ -125,7 +147,26 @@
             </div>
         </div>
     </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let close = document.getElementById("close")
+        close.addEventListener("click", () => {
+            gsap.to(".navbar .main", {
+                left: "-100%"
+            })
+        })
+        let open = document.getElementById("open")
+        open.addEventListener("click", () => {
+            gsap.to(".navbar .main", {
+                left: "0%"
+            })
+        })
 
+
+    </script>
 </body>
 
 </html>
