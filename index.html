@@ -12,7 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
+
 
 </head>
 
@@ -43,7 +43,9 @@
     <div id="home">
         <div class="navbar">
             <div class="main">
-                <img src="./Assests/Globle/logo.webp" alt="">
+                <a href="/index.html">
+                    <img src="./Assests/Globle/logo.webp" alt="">
+                </a>
                 <ul>
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="./About.html">About Us</a></li>
@@ -71,7 +73,9 @@
                             <p>Discover The Right Fit For Your Business
 
                             </p>
-                            <button>Our Services</button>
+                            <a href="./Services.html">
+                                <button>Our Services</button>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -79,7 +83,9 @@
                             <h1>Our <span>solutions</span> are <br> curated to your needs</h1>
                             <div class="underline"></div>
                             <p>Schedule A Call With Our Team</p>
-                            <button>Contact Us</button>
+                            <a href="./Contact.html">
+                                <button>Contact Us</button>
+                            </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
@@ -88,9 +94,10 @@
                             </h1>
                             <div class="underline"></div>
                             <p>Discover The Right Fit For Your Business
-
                             </p>
-                            <button>Our Services</button>
+                            <a href="./Services.html">
+                                <button>Our Services</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -185,6 +192,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -243,6 +253,94 @@
             })
         })
 
+        gsap.from(".content1 h1", {
+            y: 70,
+            duration: 1,
+            opacity: 0,
+            delay: .3
+        })
+        gsap.from(".content1 p", {
+            opacity: 0,
+            delay: 1
+        })
+        gsap.from(".underline", {
+            width: 0,
+            delay: 1
+        })
+
+        gsap.from(".sapConsulting .main .content h1", {
+            y: 40,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.sapConsulting',
+                start: "top 75%",
+                end: "bottom 0",
+            }
+        })
+        gsap.from(".sapConsulting .main .content h3", {
+            y: 40,
+            duration: 1,
+            delay: .4,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.sapConsulting',
+                start: "top 75%",
+                end: "bottom 0",
+            }
+        })
+        gsap.from(".sapConsulting .main .content p", {
+            y: 40,
+            duration: 1,
+            delay: .6,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.sapConsulting',
+                start: "top 75%",
+                end: "bottom 0",
+            }
+        })
+        gsap.from(".integration h1", {
+            y: 40,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.integration',
+                start: "top 75%",
+                end: "bottom 0",
+            }
+        })
+        gsap.from(".services h1", {
+            y: 40,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.services',
+                start: "top 75%",
+                end: "bottom 0",
+            }
+        })
+        gsap.from(".footer .main h1", {
+            y: 40,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.footer',
+                start: "top 75%",
+                end: "bottom 0",
+            }
+        })
+        gsap.from(".footer .main p", {
+            y: 40,
+            duration: 1,
+            delay:.3,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.footer',
+                start: "top 75%",
+                end: "bottom 0",
+            }
+        })
 
     </script>
 
